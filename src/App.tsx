@@ -3,6 +3,8 @@ import './index.css'
 import Navbar from './sections/Navbar';
 import MainInfoText from './sections/MainInfoText';
 import About from './sections/About';
+import { projects } from "./data";
+import Card from "./components/Card";
 import Education from './sections/Education';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
@@ -39,6 +41,14 @@ const Hero: React.FC = () => {
       <Navbar/>
       <MainInfoText/> 
       <About /> 
+        {/* {projects.map((project, index) => (
+          <Card
+            key={index}
+            style={{ background: project.color }}
+            text={project.title}
+            containerRef={null} // Replace with actual ref if needed
+          />
+        ))} */}
       {/* <Education/> */}
       {/* <Projects/> */}
       <Contact/>

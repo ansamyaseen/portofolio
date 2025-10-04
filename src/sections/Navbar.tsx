@@ -12,9 +12,9 @@ export default function Navbar(){
   }}
 />
 
-<button className="header-btn">
+{/* <button className="header-btn">
  Get in Touch
-</button>
+</button> */}
 
         </div>
        

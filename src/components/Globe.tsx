@@ -11,8 +11,8 @@ function twMerge(...classes: string[]) {
 const MOVEMENT_DAMPING = 1400;
 
 const GLOBE_CONFIG: COBEOptions = {
-  width: 800,
-  height: 800,
+  width: 600,
+  height: 600,
   onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
@@ -102,16 +102,17 @@ export function Globe({
     };
   }, [rs, config]);
 
+  // هنا return جوا الفانكشن
   return (
     <div
       className={twMerge(
-        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
-        className,
+        "relative mx-auto aspect-[1/1] w-full max-w-[450px]",
+       
       )}
     >
       <canvas
         className={twMerge(
-          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
+          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
         )}
         ref={canvasRef}
         onPointerDown={(e) => {
@@ -128,3 +129,4 @@ export function Globe({
     </div>
   );
 }
+
